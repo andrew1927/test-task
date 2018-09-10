@@ -97,10 +97,10 @@
 }
 .profile-about-page,
 .profile-photos-page {
+    padding: 52px 0 48px 0;
     display: none;
     justify-content: center;
     width: 100%;
-    height: 858px;
     background-color: #f5fcff;
 }
 .profile-about-page.active,
@@ -108,5 +108,145 @@
 display: flex;
 }
 .profile-page-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: space-between;
     width: 1200px;
+    height: 747px;
+}
+.profile-page-wrapper > section {
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+}
+h2 {
+    font: 400 30px "Bebas Neue";
+    color: #002b41;
+    letter-spacing: 1px;
+}
+h3 {
+    font: 700  18px  Raleway-Bold;
+    color: #002b41;
+}
+section p {
+    font: 400 18px Raleway-Regular;
+    color: #002b41;
+}
+.about-education,
+.about-people {
+    position: relative;
+    padding-left: 25px;
+    width: 565px;
+    height: 333px;
+    border-top: 5px solid #5fc0e7;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.about-education {
+    border-top: 5px solid #f26632;
+}
+.about-education > h3,
+.about-people > h3 {
+    margin-top: 27px;
+}
+.about-education > h2,
+.about-people > h2 {
+    margin-top: 23px;
+}
+.about-education > p,
+.about-people > p {
+    margin-top: 4px;
+}
+.about-education > a:first-of-type,
+.about-people > a:first-of-type {
+    position: absolute;
+    right: 26px;
+    top: 164px;
+    font: 300 14px Raleway-Light;
+    color: #87d0ed;
+    text-decoration: none;
+}
+.people-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 3px;
+}
+.people-flex-wrapper {
+    display: flex;
+    margin-top: 18px;
+    justify-content: space-between;
+    width: 540px;
+}
+.people-photo:nth-of-type(1) {
+     background: url("../images/people1.png") no-repeat;
+     background-size: contain;
+ }
+.people-photo:nth-of-type(2) {
+    background: url("../images/people2.png") no-repeat;
+    background-size: contain;
+}
+.people-photo:nth-of-type(3) {
+     background: url("../images/people3.png") no-repeat;
+     background-size: contain;
+ }
+.people-photo:nth-of-type(4) {
+    background: #fff url("../images/people4.png") no-repeat 50% 100%;
+    background-size: 48px 48px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
+}
+.people-photo:nth-of-type(5) {
+    background: url("../images/people5.png") no-repeat;
+    background-size: contain;
+}
+.people-photo:nth-of-type(6) {
+    background: #fff url("../images/people4.png") no-repeat 50% 100%;
+    background-size: 48px 48px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
+}
+.people-photo:nth-of-type(7) {
+    background: url("../images/people6.png") no-repeat;
+    background-size: contain;
+}
+.profile-edit-icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url("../images/edit-icon.png") no-repeat;
+    background-size: contain;
+    margin-right: 4px;
+}
+.about-education > a,
+.about-people > a,
+.about-work > a,
+.about-story > a{
+    font: 300 14px Raleway-Light;
+    color: #87d0ed;
+    text-decoration: none;
+}
+.about-story > a:last-child,
+.about-work > a:last-child,
+.about-education > a:last-child,
+.about-people > a:last-child{
+    display: block;
+    margin-top: 29px;
+}
+.about-story,
+.about-work {
+    padding-left: 25px;
+    width: 562px;
+    height: 375px;
+    border-top: 5px solid #fa5770;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.about-story> h2,
+.about-work > h2 {
+    margin-top: 23px;
+}
+.about-story> h3,
+.about-work > h3 {
+    margin-top: 27px;
+}
+.about-story > p,
+.about-work > p {
+    margin-top: 5px;
 }

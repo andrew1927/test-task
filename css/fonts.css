@@ -11,6 +11,12 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'Raleway-Light';
+    src: url("../fonts/Raleway-Light.ttf") format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
     font-family: 'Bebas Neue';
     src: url("../fonts/Bebas-Neue.ttf") format('truetype');
     font-weight: 400;
