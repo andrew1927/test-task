@@ -116,9 +116,8 @@ display: flex;
     justify-content: space-between;
     align-content: space-between;
     width: 1200px;
-    height: 747px;
 }
-.profile-page-wrapper > section {
+.profile-about-page > .profile-page-wrapper > section {
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
 }
 h2 {
@@ -299,4 +298,58 @@ h3 {
 }
 .photos-filter-wrapper > button:nth-of-type(5) {
     margin-right: 73px;
+}
+.photos-gallery {
+    margin: 31px 0 142px 0;
+    padding: 25px 25px;
+    height: 550px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+}
+.photos-gallery  img {
+    width: 274px;
+    height: 170px;
+    border-radius: 4px;
+}
+.photo-wrapper {
+    position: relative;
+    width: 274px;
+    height: 170px;
+}
+.bg-selected-image {
+    opacity: 0;
+    top: 0;
+    position: absolute;
+    width: 274px;
+    height: 170px;
+    background-color: #002b41;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+}
+.zoom {
+    position: absolute;
+    top: 37%;
+    left: 43%;
+    width: 40px;
+    height: 40px;
+    background: url("../images/zoom-icon.png") no-repeat;
+    background-size: contain;
+    opacity: 0;
+}
+.photo-wrapper:hover {
+    cursor: pointer;
+}
+.photo-wrapper:hover .bg-selected-image{
+    opacity: .7;
+    transition: .5s ease;
+ }
+.photo-wrapper:hover .zoom {
+    opacity: 1;
+    transition: .5s ease;
 }
