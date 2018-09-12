@@ -106,9 +106,12 @@
     padding: 52px 0 48px 0;
 }
 
-/*.profile-about-page.active,*/
+.profile-about-page.active,
 .profile-photos-page.active {
-display: flex;
+    display: flex;
+}
+.profile-about-page > .profile-page-wrapper {
+    height: 747px;
 }
 .profile-page-wrapper {
     display: flex;
@@ -266,7 +269,7 @@ h3 {
     height: 18px;
     font: 700 18px Raleway-Bold;
     color: #002b41;
-    margin: 0px 27px 0 23px;
+    margin: 0 27px 0 23px;
 }
 .photos-filter-wrapper > button {
     font: 400 16px Raleway-Regular;
@@ -316,7 +319,7 @@ h3 {
     height: 170px;
     border-radius: 4px;
 }
-.photo-wrapper {
+.photo-gallery-wrapper {
     position: relative;
     width: 274px;
     height: 170px;
@@ -342,29 +345,31 @@ h3 {
     background-size: contain;
     opacity: 0;
 }
-.photo-wrapper:hover {
+.photo-gallery-wrapper:hover {
     cursor: pointer;
 }
-.photo-wrapper:hover .bg-selected-image{
+.photo-gallery-wrapper:hover .bg-selected-image{
     opacity: .7;
     transition: .5s ease;
  }
-.photo-wrapper:hover .zoom {
+.photo-gallery-wrapper:hover .zoom {
     opacity: 1;
     transition: .5s ease;
 }
 .photo-popup {
-    /*display: none;*/
-    position: relative;
-    top:-1180px;
-    display: flex;
+    display: none;
+    position: absolute;
+    top:0;
     justify-content: center;
     width: 100%;
     height: 1180px;
-    background-color: #002b41;
-    opacity: .8;
+    background-color: rgba(0, 43, 65, 0.8);;
 }
 .photo-popup > img {
+    width: 1200px;
+    height: 525px;
+}
+.large-photo-popup {
     width: 1200px;
     height: 525px;
 }
@@ -382,5 +387,7 @@ h3 {
     position: relative;
     width: 1200px;
     height: 525px;
-    background-color: #969696;
+}
+.photo-popup.open {
+    display: flex;
 }

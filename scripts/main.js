@@ -1,14 +1,23 @@
 let elTabAboutButton,
     elTabPhotosButton,
+    elClosePopupButton,
     elProfileAboutPage,
-    elProfilePhotosPage;
+    elProfilePhotosPage,
+    elBgSelectedImage,
+    elLargePhotoPopup,
+    elPhotoPopup;
 
+const elPhotoGalleryWrapperCollection = document.getElementsByClassName("photo-gallery-wrapper");
 
 try {
     elTabAboutButton = getElementByClass('about');
     elTabPhotosButton = getElementByClass("photos");
+    elClosePopupButton = getElementByClass("close-popup");
     elProfileAboutPage = getElementByClass("profile-about-page");
     elProfilePhotosPage = getElementByClass("profile-photos-page");
+    elBgSelectedImage = getElementByClass("bg-selected-image");
+    elLargePhotoPopup = getElementByClass("large-photo-popup");
+    elPhotoPopup = getElementByClass("photo-popup");
 
 } catch (e) {
     console.error('Failed to init elements: ' + e.message);
@@ -39,3 +48,29 @@ elTabPhotosButton.addEventListener("click",()=>{
         elProfileAboutPage.classList.remove("active");
     }
 });
+
+function addEventListener (collection){
+    for(let i = 0; i<collection.length; i++){
+        let elChosenPhoto = collection[i];
+        elChosenPhoto.addEventListener("click",()=>{
+            if(!elPhotoPopup.classList.contains("open")) {
+                elPhotoPopup.classList.add("open");
+                elLargePhotoPopup.src = elChosenPhoto.getElementsByTagName("img")[0].src;
+            }
+        });
+    }
+}
+
+addEventListener(elPhotoGalleryWrapperCollection);
+
+
+
+function closePopup() {
+    elClosePopupButton.addEventListener("click", ()=>{
+       if(elPhotoPopup.classList.contains("open")) {
+           elPhotoPopup.classList.remove("open");
+       }
+   });
+}
+
+closePopup();
