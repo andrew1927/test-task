@@ -22,12 +22,33 @@ try {
 } catch (e) {
     console.error('Failed to init elements: ' + e.message);
 }
+
 function getElementByClass(className) {
     const elements = document.getElementsByClassName(className);
     if (elements.length == 0) {
         throw new Error(`No element "${className}"`);
     }
     return elements[0];
+}
+
+function openPopup(){
+    if(!elPhotoPopup.classList.contains("open"))
+        elPhotoPopup.classList.add("open");
+}
+
+function closePopup() {
+    if(elPhotoPopup.classList.contains("open"))
+        elPhotoPopup.classList.remove("open");
+}
+
+function addLargePhoto (collection){
+    for(let i = 0; i<collection.length; i++){
+        let elChosenPhoto = collection[i];
+        elChosenPhoto.addEventListener("click",()=>{
+            openPopup();
+            elLargePhotoPopup.src = elChosenPhoto.getElementsByTagName("img")[0].src;
+        });
+    }
 }
 
 elTabAboutButton.addEventListener("click",()=>{
@@ -49,28 +70,9 @@ elTabPhotosButton.addEventListener("click",()=>{
     }
 });
 
-function addEventListener (collection){
-    for(let i = 0; i<collection.length; i++){
-        let elChosenPhoto = collection[i];
-        elChosenPhoto.addEventListener("click",()=>{
-            if(!elPhotoPopup.classList.contains("open")) {
-                elPhotoPopup.classList.add("open");
-                elLargePhotoPopup.src = elChosenPhoto.getElementsByTagName("img")[0].src;
-            }
-        });
-    }
-}
+elClosePopupButton.addEventListener("click", ()=>{
+    closePopup();
+});
 
-addEventListener(elPhotoGalleryWrapperCollection);
-
-
-
-function closePopup() {
-    elClosePopupButton.addEventListener("click", ()=>{
-       if(elPhotoPopup.classList.contains("open")) {
-           elPhotoPopup.classList.remove("open");
-       }
-   });
-}
-
+addLargePhoto(elPhotoGalleryWrapperCollection);
 closePopup();
