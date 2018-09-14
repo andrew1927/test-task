@@ -1,8 +1,8 @@
 let elTabAboutButton,
     elTabPhotosButton,
     elClosePopupButton,
-    elProfileAboutPage,
-    elProfilePhotosPage,
+    elFirstPage,
+    elSecondPage,
     elBgSelectedImage,
     elLargePhotoPopup,
     elPhotoPopup;
@@ -10,11 +10,11 @@ let elTabAboutButton,
 const elPhotoGalleryWrapperCollection = document.getElementsByClassName("photo-gallery-wrapper");
 
 try {
-    elTabAboutButton = getElementByClass('about');
-    elTabPhotosButton = getElementByClass("photos");
+    elTabAboutButton = getElementByClass("about-btn");
+    elTabPhotosButton = getElementByClass("photos-btn");
     elClosePopupButton = getElementByClass("close-popup");
-    elProfileAboutPage = getElementByClass("profile-about-page");
-    elProfilePhotosPage = getElementByClass("profile-photos-page");
+    elFirstPage = getElementByClass("first-page");
+    elSecondPage = getElementByClass("second-page");
     elBgSelectedImage = getElementByClass("bg-selected-image");
     elLargePhotoPopup = getElementByClass("large-photo-popup");
     elPhotoPopup = getElementByClass("photo-popup");
@@ -56,8 +56,8 @@ elTabAboutButton.addEventListener("click",()=>{
         elTabAboutButton.classList.add("active");
         elTabPhotosButton.classList.remove("active");
 
-        elProfileAboutPage.classList.add("active");
-        elProfilePhotosPage.classList.remove("active");
+        elFirstPage.classList.add("active");
+        elSecondPage.classList.remove("active");
 });
 
 elTabPhotosButton.addEventListener("click",()=>{
@@ -65,8 +65,8 @@ elTabPhotosButton.addEventListener("click",()=>{
         elTabPhotosButton.classList.add("active");
         elTabAboutButton.classList.remove("active");
 
-        elProfilePhotosPage.classList.add("active");
-        elProfileAboutPage.classList.remove("active");
+        elSecondPage.classList.add("active");
+        elFirstPage.classList.remove("active");
     }
 });
 
