@@ -1,51 +1,51 @@
+(function() {
+
 let elTabAboutButton,
     elTabPhotosButton,
     elClosePopupButton,
     elFirstPage,
     elSecondPage,
-    elBgSelectedImage,
     elLargePhotoPopup,
-    elPhotoPopup;
+    elImagePopup;
 
-const elPhotoGalleryWrapperCollection = document.getElementsByClassName("photo-gallery-wrapper");
+const elPhotoGalleryWrapperCollection = document.getElementsByClassName("photo-wrapper");
 
 try {
-    elTabAboutButton = getElementByClass("about-btn");
-    elTabPhotosButton = getElementByClass("photos-btn");
-    elClosePopupButton = getElementByClass("close-popup");
-    elFirstPage = getElementByClass("first-page");
-    elSecondPage = getElementByClass("second-page");
-    elBgSelectedImage = getElementByClass("bg-selected-image");
-    elLargePhotoPopup = getElementByClass("large-photo-popup");
-    elPhotoPopup = getElementByClass("photo-popup");
+    elTabAboutButton = getElementById("about-btn");
+    elTabPhotosButton = getElementById("photos-btn");
+    elClosePopupButton = getElementById("close-popup");
+    elFirstPage = getElementById("first-page");
+    elSecondPage = getElementById("second-page");
+    elLargePhotoPopup = getElementById("large-photo-popup");
+    elImagePopup = getElementById("image-popup");
 
 } catch (e) {
     console.error('Failed to init elements: ' + e.message);
 }
 
-function getElementByClass(className) {
-    const elements = document.getElementsByClassName(className);
-    if (elements.length == 0) {
-        throw new Error(`No element "${className}"`);
+function getElementById(id) {
+    const element = document.getElementById(id);
+    if (element.length == 0) {
+        throw new Error(`No element "${id}"`);
     }
-    return elements[0];
+    return element;
 }
 
-function openPopup(){
-    if(!elPhotoPopup.classList.contains("open"))
-        elPhotoPopup.classList.add("open");
+function openPopup(element){
+    if(!element.classList.contains("open"))
+        element.classList.add("open");
 }
 
-function closePopup() {
-    if(elPhotoPopup.classList.contains("open"))
-        elPhotoPopup.classList.remove("open");
+function closePopup(element) {
+    if(element.classList.contains("open"))
+        element.classList.remove("open");
 }
 
 function addLargePhoto (collection){
     for(let i = 0; i<collection.length; i++){
         let elChosenPhoto = collection[i];
         elChosenPhoto.addEventListener("click",()=>{
-            openPopup();
+            openPopup(elImagePopup);
             elLargePhotoPopup.src = elChosenPhoto.getElementsByTagName("img")[0].src;
         });
     }
@@ -71,8 +71,9 @@ elTabPhotosButton.addEventListener("click",()=>{
 });
 
 elClosePopupButton.addEventListener("click", ()=>{
-    closePopup();
+    closePopup(elImagePopup);
 });
 
 addLargePhoto(elPhotoGalleryWrapperCollection);
-closePopup();
+
+})();

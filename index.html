@@ -33,13 +33,13 @@
         </header>
         <nav class="tab-menu">
             <div class="alignment-wrapper">
-                <button class="about-btn active">ABOUT</button>
-                <button class="photos-btn">PHOTOS</button>
+                <button id="about-btn" class="active">ABOUT</button>
+                <button id="photos-btn">PHOTOS</button>
             </div>
         </nav>
         <div class="pages-wrapper">
             <div class="alignment-wrapper">
-                <div class="first-page active">
+                <div id="first-page" class="active">
                     <section class="people-section">
                         <h2>PEOPLE</h2>
                         <h3>In your circles</h3>
@@ -95,89 +95,75 @@
                         <a href="#" class="edit-section">Edit</a>
                     </section>
                 </div>
-                <div class="second-page">
-                    <div class="alignment-wrapper">
-                        <div class="photos-filter-wrapper">
-                            <p>Show me:</p>
-                            <button>ALL</button>
-                            <button>ARCHITECTURE</button>
-                            <button>IMAGES</button>
-                            <button>NATURE</button>
-                            <button>PHOTOGRAPHY</button>
-                            <button>VIDEOS</button>
+                <div id="second-page">
+                    <div class="filter-wrapper">
+                        <p>Show me:</p>
+                        <button>ALL</button>
+                        <button>ARCHITECTURE</button>
+                        <button>IMAGES</button>
+                        <button>NATURE</button>
+                        <button>PHOTOGRAPHY</button>
+                        <button>VIDEOS</button>
+                    </div>
+                    <div class="gallery">
+                        <div class="photo-wrapper">
+                            <img src="images/nature1.png" alt="nature imagery" class="photo">
+                            <div class="bg-selected-image"></div>
                         </div>
-                        <div class="photos-gallery">
-                            <div class="photo-gallery-wrapper">
-                                <img src="images/nature1.png" alt="nature imagery" class="photo">
-                                <div class="bg-selected-image"></div>
-                                <div class="zoom"></div>
-                            </div>
-                            <div class="photo-gallery-wrapper">
-                                <img src="images/nature2.png" alt="nature imagery">
-                                <div class="bg-selected-image"></div>
-                                <div class="zoom"></div>
-                            </div>
-                            <div class="photo-gallery-wrapper">
-                                <img src="images/nature3.png" alt="nature imagery">
-                                <div class="bg-selected-image"></div>
-                                <div class="zoom"></div>
-                            </div>
-                            <div class="photo-gallery-wrapper">
-                                <img src="images/nature4.png" alt="nature imagery">
-                                <div class="bg-selected-image"></div>
-                                <div class="zoom"></div>
-                            </div>
-                            <div class="photo-gallery-wrapper">
-                                <img src="images/nature5.png" alt="nature imagery">
-                                <div class="bg-selected-image"></div>
-                                <div class="zoom"></div>
-                            </div>
-                            <div class="photo-gallery-wrapper">
-                                <img src="images/nature6.png" alt="nature imagery">
-                                <div class="bg-selected-image"></div>
-                                <div class="zoom"></div>
-                            </div>
-                            <div class="photo-gallery-wrapper">
-                                <img src="images/nature7.png" alt="nature imagery">
-                                <div class="bg-selected-image"></div>
-                                <div class="zoom"></div>
-                            </div>
-                            <div class="photo-gallery-wrapper">
-                                <img src="images/nature8.png" alt="nature imagery">
-                                <div class="bg-selected-image"></div>
-                                <div class="zoom"></div>
-                            </div>
-                            <div class="photo-gallery-wrapper">
-                                <img src="images/nature9.png" alt="nature imagery">
-                                <div class="bg-selected-image"></div>
-                                <div class="zoom"></div>
-                            </div>
-                            <div class="photo-gallery-wrapper">
-                                <img src="images/nature10.png" alt="nature imagery">
-                                <div class="bg-selected-image"></div>
-                                <div class="zoom"></div>
-                            </div>
-                            <div class="photo-gallery-wrapper">
-                                <img src="images/nature11.png" alt="nature imagery">
-                                <div class="bg-selected-image"></div>
-                                <div class="zoom"></div>
-                            </div>
-                            <div class="photo-gallery-wrapper">
-                                <img src="images/nature12.png" alt="nature imagery">
-                                <div class="bg-selected-image"></div>
-                                <div class="zoom"></div>
+                        <div class="photo-wrapper">
+                            <img src="images/nature2.png" alt="nature imagery">
+                            <div class="bg-selected-image"></div>
+                        </div>
+                        <div class="photo-wrapper">
+                            <img src="images/nature3.png" alt="nature imagery">
+                            <div class="bg-selected-image"></div>
+                        </div>
+                        <div class="photo-wrapper">
+                            <img src="images/nature4.png" alt="nature imagery">
+                            <div class="bg-selected-image"></div>
+                        </div>
+                        <div class="photo-wrapper">
+                            <img src="images/nature5.png" alt="nature imagery">
+                            <div class="bg-selected-image"></div>
+                        </div>
+                        <div class="photo-wrapper">
+                            <img src="images/nature6.png" alt="nature imagery">
+                            <div class="bg-selected-image"></div>
+                        </div>
+                        <div class="photo-wrapper">
+                            <img src="images/nature7.png" alt="nature imagery">
+                            <div class="bg-selected-image"></div>
+                        </div>
+                        <div class="photo-wrapper">
+                            <img src="images/nature8.png" alt="nature imagery">
+                            <div class="bg-selected-image"></div>
+                        </div>
+                        <div class="photo-wrapper">
+                            <img src="images/nature9.png" alt="nature imagery">
+                            <div class="bg-selected-image"></div>
+                        </div>
+                        <div class="photo-wrapper">
+                            <img src="images/nature10.png" alt="nature imagery">
+                            <div class="bg-selected-image"></div>
+                        </div>
+                        <div class="photo-wrapper">
+                            <img src="images/nature11.png" alt="nature imagery">
+                            <div class="bg-selected-image"></div>
+                        </div>
+                        <div class="photo-wrapper">
+                            <img src="images/nature12.png" alt="nature imagery">
+                            <div class="bg-selected-image"></div>
+                        </div>
+                    </div>
+                    <div id="image-popup">
+                        <div class="static">
+                            <div class="photo-popup-wrapper">
+                                <img src="#" alt="nature imagery" id="large-photo-popup">
+                                <button id="close-popup"></button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="photo-popup">
-            <div class="static">
-            <div class="photo-popup-wrapper">
-                <img src="#" alt="nature imagery" class="large-photo-popup">
-                <button class="close-popup"></button>
-            </div>
             </div>
         </div>
     </div>

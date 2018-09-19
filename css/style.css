@@ -108,25 +108,25 @@ h1 {
     border-bottom: 2px solid #f1f1f3;
     background-color: #fff;
 }
-.about-btn,
-.photos-btn {
+#about-btn,
+#photos-btn {
     width: 240px;
-    height: 100px;
+    height: 101px;
     border-bottom: 2px solid #f1f1f3;
     background-color: #fff;
     color: #002b41;
     font: 400 36px "BebasNeue";
 }
-.photos-btn.active,
-.about-btn.active {
+#photos-btn.active,
+#about-btn.active {
     border-bottom: 2px solid #5fc0e7;
     background-color: #f1f1f3;
 }
-.first-page,
-.second-page {
+#first-page,
+#second-page {
     display: none;
 }
-.first-page {
+#first-page {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
@@ -139,13 +139,15 @@ h1 {
     height: 747px;
     padding: 52px 0 48px 0;
 }
-.first-page.active,
-.second-page.active {
+#first-page.active{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
-.first-page > section {
+#second-page.active {
+    display: block;
+}
+#first-page > section {
     -webkit-box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
 }
@@ -256,7 +258,7 @@ h3 {
 .work-section > p {
     margin-top: 5px;
 }
-.photos-filter-wrapper {
+.filter-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -271,37 +273,37 @@ h3 {
     -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
 }
-.photos-filter-wrapper > p {
+.filter-wrapper > p {
     height: 18px;
     margin: 0 27px 0 23px;
     color: #002b41;
     font: 700 18px RalewayBold;
 }
-.photos-filter-wrapper > button {
+.filter-wrapper > button {
     background-color: #fff;
     color: #002b41;
     font: 400 16px RalewayRegular;
 }
-.photos-filter-wrapper > button:first-of-type {
+.filter-wrapper > button:first-of-type {
     border-radius: 16px;
     margin-right: 49px;
     padding: 6px 20px;
     background-color: #5fc0e7;
     color: #fff;
 }
-.photos-filter-wrapper > button:nth-of-type(2) {
+.filter-wrapper > button:nth-of-type(2) {
     margin-right: 71px;
 }
-.photos-filter-wrapper > button:nth-of-type(3) {
+.filter-wrapper > button:nth-of-type(3) {
     margin-right: 64px;
 }
-.photos-filter-wrapper > button:nth-of-type(4) {
+.filter-wrapper > button:nth-of-type(4) {
     margin-right: 63px;
 }
-.photos-filter-wrapper > button:nth-of-type(5) {
+.filter-wrapper > button:nth-of-type(5) {
     margin-right: 73px;
 }
-.photos-gallery {
+.gallery {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -322,12 +324,12 @@ h3 {
     -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
 }
-.photos-gallery  img {
+.gallery  img {
     width: 274px;
     height: 170px;
     border-radius: 4px;
 }
-.photo-gallery-wrapper {
+.photo-wrapper {
     position: relative;
     width: 274px;
     height: 170px;
@@ -344,35 +346,20 @@ h3 {
     width: 274px;
     height: 170px;
     border-radius: 4px;
-    background-color: #002b41;
+    background: url("../images/zoom-icon.png") no-repeat #002b41 50% 50%;
+    background-size: 40px 40px;
     opacity: 0;
 }
-.zoom {
-    position: absolute;
-    top: 37%;
-    left: 43%;
-    width: 40px;
-    height: 40px;
-    background: url("../images/zoom-icon.png") no-repeat;
-    background-size: contain;
-    opacity: 0;
-}
-.photo-gallery-wrapper:hover {
+.photo-wrapper:hover {
     cursor: pointer;
 }
-.photo-gallery-wrapper:hover .bg-selected-image{
+.photo-wrapper:hover .bg-selected-image{
     opacity: .7;
     -webkit-transition: .5s ease;
     -o-transition: .5s ease;
     transition: .5s ease;
 }
-.photo-gallery-wrapper:hover .zoom {
-    opacity: 1;
-    -webkit-transition: .5s ease;
-    -o-transition: .5s ease;
-    transition: .5s ease;
-}
-.photo-popup {
+#image-popup {
     position: fixed;
     display: none;
     top: 0;
@@ -390,11 +377,11 @@ h3 {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.large-photo-popup {
+#large-photo-popup {
     width: 100%;
     height: 100%;
 }
-.close-popup {
+#close-popup {
     position: absolute;
     top: -22px;
     right: -23px;
@@ -403,7 +390,7 @@ h3 {
     background: url("../images/close-popup-btn.png") no-repeat;
     background-size: 52px 52px;
 }
-.photo-popup.open {
+#image-popup.open {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
