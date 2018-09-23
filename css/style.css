@@ -44,7 +44,7 @@ header > .alignment-wrapper {
 h1 {
     margin: 7px 0 0 2px;
     color: #002b41;
-    font: 700  36px  RalewayBold;
+    font: 700 36px RalewayBold;
 }
 .data-wrapper > ul {
     display: -webkit-box;
@@ -73,20 +73,14 @@ h1 {
 .job-icon{
     width: 19px;
     height: 16px;
-    background: url("../images/job-icon.png") no-repeat;
-    background-size: contain;
 }
 .home-icon {
     width: 14px;
     height: 20px;
-    background: url("../images/home-icon.png") no-repeat;
-    background-size: contain;
 }
 .people-icon {
     width: 20px;
     height: 20px;
-    background: url("../images/people-icon.png") no-repeat;
-    background-size: contain;
 }
 #pages-wrapper {
     display: -webkit-box;
@@ -108,8 +102,7 @@ h1 {
     border-bottom: 2px solid #f1f1f3;
     background: #fff;
 }
-#about-btn,
-#photos-btn {
+.tab-button {
     width: 240px;
     height: 101px;
     border-bottom: 2px solid #f1f1f3;
@@ -117,13 +110,11 @@ h1 {
     color: #002b41;
     font: 400 36px "BebasNeue";
 }
-#photos-btn.active,
-#about-btn.active {
+.tab-button.active {
     border-bottom: 2px solid #5fc0e7;
     background: #f1f1f3;
 }
-#first-page,
-#second-page {
+.tab-page {
     display: none;
 }
 #first-page {
@@ -145,7 +136,7 @@ h1 {
     display: -ms-flexbox;
     display: flex;
 }
-#second-page.active {
+.tab-page.active {
     display: block;
 }
 #first-page > section {
@@ -223,18 +214,12 @@ h3 {
     background: url("../images/edit-icon.png") no-repeat;
     background-size: contain;
 }
-.education-section > a,
-.people-section > a,
-.work-section > a,
-.story-section > a{
+#first-page > section > a {
     color: #87d0ed;
     font: 300 14px RalewayLight;
     text-decoration: none;
 }
-.story-section > a:last-child,
-.work-section > a:last-child,
-.education-section > a:last-child,
-.people-section > a:last-child{
+#first-page > section > a:last-child{
     display: block;
     margin-top: 29px;
 }
@@ -281,6 +266,7 @@ h3 {
     font: 700 18px RalewayBold;
 }
 .filter-wrapper > button {
+    min-width: 162px;
     background: #fff;
     color: #002b41;
     font: 400 16px RalewayRegular;
@@ -292,17 +278,10 @@ h3 {
     background: #5fc0e7;
     color: #fff;
 }
-.filter-wrapper > button:nth-of-type(2) {
-    margin-right: 71px;
-}
-.filter-wrapper > button:nth-of-type(3) {
-    margin-right: 64px;
-}
-.filter-wrapper > button:nth-of-type(4) {
-    margin-right: 63px;
-}
-.filter-wrapper > button:nth-of-type(5) {
-    margin-right: 73px;
+.filter-wrapper > button:nth-of-type(1) {
+    width: 71px;
+    min-width: 71px;
+    margin-right: 33px;
 }
 .gallery {
     display: -webkit-box;
@@ -317,7 +296,6 @@ h3 {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    height: 550px;
     border-radius: 4px;
     margin: 31px 0 142px 0;
     padding: 25px 25px;
@@ -326,14 +304,15 @@ h3 {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
 }
 .gallery  img {
-    width: 274px;
-    height: 170px;
+    width: inherit;
+    height: inherit;
     border-radius: 4px;
 }
 .image-wrapper {
     position: relative;
     width: 274px;
     height: 170px;
+    margin-bottom: 21px;
 }
 .bg-selected-image {
     position: absolute;
@@ -344,8 +323,8 @@ h3 {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    width: 274px;
-    height: 170px;
+    width: inherit;
+    height: inherit;
     border-radius: 4px;
     background: url("../images/zoom-icon.png") no-repeat #002b41 50% 50%;
     background-size: 40px 40px;
@@ -386,10 +365,10 @@ h3 {
     position: absolute;
     top: -22px;
     right: -23px;
-    width: 52px;
-    height: 52px;
+    width: 54px;
+    height: 54px;
     background: url("../images/close-popup-btn.png") no-repeat;
-    background-size: 52px 52px;
+    background-size: contain;
 }
 #image-popup-wrapper.open {
     display: -webkit-box;
