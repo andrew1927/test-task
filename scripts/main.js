@@ -1,23 +1,21 @@
 (function() {
 
-let elTabAboutButton,
-    elTabPhotosButton,
-    elClosePopupButton,
-    elFirstPage,
-    elSecondPage,
-    elLargePhotoPopup,
-    elImagePopup;
+let elTabMenu,
+    elPagesWrapper,
+    elCloseImagePopupButton,
+    elLargeImage,
+    elImagePopupWrapper;
 
-const elPhotoGalleryWrapperCollection = document.getElementsByClassName("photo-wrapper");
+const elGalleryCollection = document.getElementsByClassName("image-wrapper"),
+      elTabButtonCollection = document.getElementsByClassName("tab-button"),
+      elTabPageCollection = document.getElementsByClassName("tab-page");
 
 try {
-    elTabAboutButton = getElementById("about-btn");
-    elTabPhotosButton = getElementById("photos-btn");
-    elClosePopupButton = getElementById("close-popup");
-    elFirstPage = getElementById("first-page");
-    elSecondPage = getElementById("second-page");
-    elLargePhotoPopup = getElementById("large-photo-popup");
-    elImagePopup = getElementById("image-popup");
+    elTabMenu = getElementById("tab-menu");
+    elPagesWrapper = getElementById("pages-wrapper");
+    elCloseImagePopupButton = getElementById("close-image-popup");
+    elLargeImage = getElementById("large-image");
+    elImagePopupWrapper = getElementById("image-popup-wrapper");
 
 } catch (e) {
     console.error('Failed to init elements: ' + e.message);
@@ -25,55 +23,49 @@ try {
 
 function getElementById(id) {
     const element = document.getElementById(id);
-    if (element.length == 0) {
+    if (element === null) {
         throw new Error(`No element "${id}"`);
     }
     return element;
 }
 
-function openPopup(element){
+Array.prototype.forEach.call(elTabButtonCollection, (item,i)=>{
+    item.addEventListener("click",  function(){
+        const elActiveButton = elTabMenu.getElementsByClassName("active")[0];
+        const elActivePage = elPagesWrapper.getElementsByClassName("active")[0];
+        elActiveButton.classList.remove("active");
+        elActivePage.classList.remove("active");
+
+        event.currentTarget.classList.add("active");
+        elTabPageCollection[i].classList.add("active");
+    });
+});
+
+function openImagePopup(element){
     if(!element.classList.contains("open"))
         element.classList.add("open");
 }
 
-function closePopup(element) {
+function closeImagePopup(element) {
     if(element.classList.contains("open"))
         element.classList.remove("open");
 }
 
-function addLargePhoto (collection){
+function addLargeImage (collection, elPopup, elImage){
     for(let i = 0; i<collection.length; i++){
-        let elChosenPhoto = collection[i];
-        elChosenPhoto.addEventListener("click",()=>{
-            openPopup(elImagePopup);
-            elLargePhotoPopup.src = elChosenPhoto.getElementsByTagName("img")[0].src;
+        let elChosenImage = collection[i];
+        elChosenImage.addEventListener("click",()=>{
+            elImage.src = elChosenImage.getElementsByTagName("img")[0].src;
+            openImagePopup(elPopup);
         });
     }
 }
 
-elTabAboutButton.addEventListener("click",()=>{
-    if(!elTabAboutButton.classList.contains("active")&& elTabPhotosButton.classList.contains("active"))
-        elTabAboutButton.classList.add("active");
-        elTabPhotosButton.classList.remove("active");
+addLargeImage(elGalleryCollection, elImagePopupWrapper,elLargeImage);
 
-        elFirstPage.classList.add("active");
-        elSecondPage.classList.remove("active");
+elCloseImagePopupButton.addEventListener("click", ()=>{
+    closeImagePopup(elImagePopupWrapper);
 });
-
-elTabPhotosButton.addEventListener("click",()=>{
-    if(!elTabPhotosButton.classList.contains("active") && elTabAboutButton.classList.contains("active")){
-        elTabPhotosButton.classList.add("active");
-        elTabAboutButton.classList.remove("active");
-
-        elSecondPage.classList.add("active");
-        elFirstPage.classList.remove("active");
-    }
-});
-
-elClosePopupButton.addEventListener("click", ()=>{
-    closePopup(elImagePopup);
-});
-
-addLargePhoto(elPhotoGalleryWrapperCollection);
 
 })();
+
