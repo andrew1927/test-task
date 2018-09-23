@@ -2,8 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb8371b0-a2a7-47b3-9da7-d750fd398603" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/close-popup-btn.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/close-popup-btn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/edit-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/edit-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/header-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/header-bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/home-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/home-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/job-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/job-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nature1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/nature1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nature11.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/nature11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nature2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/nature2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nature3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/nature3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nature4.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/nature4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nature5.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/nature5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nature6.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/nature6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nature7.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/nature7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nature8.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/nature8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nature9.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/nature9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/people-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/people-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/people3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/people3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/people4.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/people4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/people5.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/people5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/people6.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/people6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/profile-avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/profile-avatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/zoom-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/zoom-icon.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -68,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="718">
-              <caret line="70" column="55" lean-forward="true" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="55" />
+              <caret line="70" column="55" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="55" />
               <folding>
                 <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
@@ -79,8 +99,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="326" column="20" lean-forward="true" selection-start-line="326" selection-start-column="20" selection-end-line="326" selection-end-column="20" />
+            <state relative-caret-position="432">
+              <caret line="375" column="18" selection-start-line="375" selection-start-column="18" selection-end-line="375" selection-end-column="18" />
               <folding>
                 <marker date="1537728085808" expanded="true" signature="5986:6091" ph="..." />
                 <marker date="1537728085808" expanded="true" signature="7710:7743" ph="..." />
@@ -247,12 +267,12 @@
       <workItem from="1537705856946" duration="3000" />
       <workItem from="1537708156795" duration="325000" />
       <workItem from="1537722355164" duration="2234000" />
-      <workItem from="1537725193644" duration="2841000" />
+      <workItem from="1537725193644" duration="3569000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58068000" />
+    <option name="totallyTimeSpent" value="58796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -304,7 +324,7 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="718">
-          <caret line="70" column="55" lean-forward="true" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="55" />
+          <caret line="70" column="55" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="55" />
           <folding>
             <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
@@ -313,8 +333,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="326" column="20" lean-forward="true" selection-start-line="326" selection-start-column="20" selection-end-line="326" selection-end-column="20" />
+        <state relative-caret-position="432">
+          <caret line="375" column="18" selection-start-line="375" selection-start-column="18" selection-end-line="375" selection-end-column="18" />
           <folding>
             <marker date="1537728085808" expanded="true" signature="5986:6091" ph="..." />
             <marker date="1537728085808" expanded="true" signature="7710:7743" ph="..." />
