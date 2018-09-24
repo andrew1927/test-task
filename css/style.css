@@ -109,6 +109,7 @@ h1 {
     background: #fff;
     color: #002b41;
     font: 400 36px "BebasNeue";
+    cursor: pointer;
 }
 .tab-button.active {
     border-bottom: 2px solid #5fc0e7;
@@ -369,6 +370,7 @@ h3 {
     height: 54px;
     background: url("../images/close-popup-btn.png") no-repeat;
     background-size: contain;
+    cursor: pointer;
 }
 #image-popup-wrapper.open {
     display: -webkit-box;
