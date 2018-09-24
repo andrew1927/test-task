@@ -82,7 +82,7 @@ h1 {
     width: 20px;
     height: 20px;
 }
-#pages-wrapper {
+#pagesWrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -91,7 +91,7 @@ h1 {
     justify-content: center;
     background: #f5fcff;
 }
-#tab-menu{
+#tabMenu{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -118,7 +118,7 @@ h1 {
 .tab-page {
     display: none;
 }
-#first-page {
+#firstPage {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
@@ -132,7 +132,7 @@ h1 {
     height: 747px;
     padding: 52px 0 48px 0;
 }
-#first-page.active{
+#firstPage.active{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -140,7 +140,7 @@ h1 {
 .tab-page.active {
     display: block;
 }
-#first-page > section {
+#firstPage > section {
     -webkit-box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
 }
@@ -215,12 +215,12 @@ h3 {
     background: url("../images/edit-icon.png") no-repeat;
     background-size: contain;
 }
-#first-page > section > a {
+#firstPage > section > a {
     color: #87d0ed;
     font: 300 14px RalewayLight;
     text-decoration: none;
 }
-#first-page > section > a:last-child{
+#firstPage > section > a:last-child{
     display: block;
     margin-top: 29px;
 }
@@ -340,7 +340,7 @@ h3 {
     -o-transition: .5s ease;
     transition: .5s ease;
 }
-#image-popup-wrapper {
+#imagePopupWrapper {
     position: fixed;
     display: none;
     top: 0;
@@ -358,11 +358,11 @@ h3 {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-#large-image {
+#largeImage {
     width: 100%;
     height: 100%;
 }
-#close-image-popup {
+#closeImagePopup {
     position: absolute;
     top: -22px;
     right: -23px;
@@ -372,7 +372,7 @@ h3 {
     background-size: contain;
     cursor: pointer;
 }
-#image-popup-wrapper.open {
+#imagePopupWrapper.open {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

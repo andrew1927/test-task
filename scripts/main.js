@@ -20,11 +20,11 @@
 
     function initElements() {
         try {
-            elTabMenu = getElementById("tab-menu");
-            elPagesWrapper = getElementById("pages-wrapper");
-            elCloseImagePopupButton = getElementById("close-image-popup");
-            elLargeImage = getElementById("large-image");
-            elImagePopupWrapper = getElementById("image-popup-wrapper");
+            elTabMenu = getElementById("tabMenu");
+            elPagesWrapper = getElementById("pagesWrapper");
+            elCloseImagePopupButton = getElementById("closeImagePopup");
+            elLargeImage = getElementById("largeImage");
+            elImagePopupWrapper = getElementById("imagePopupWrapper");
 
             elGalleryCollection = getElementsByClass("image-wrapper");
             elTabButtonCollection = getElementsByClass("tab-button");
